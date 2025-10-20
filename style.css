@@ -1,0 +1,367 @@
+/* Reset dan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Profile */
+.profile-header {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    background-color: #f0d5d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+.profile-info {
+    padding: 30px;
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    color: #8b4545;
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #c97b7b;
+    width: 20px;
+}
+
+/* Section */
+.section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section h2 {
+    color: #8b4545;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0d5d5;
+    display: flex;
+    align-items: center;
+}
+
+.section h2 i {
+    margin-right: 10px;
+    color: #c97b7b;
+}
+
+/* Personal Details */
+.personal-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.detail-item {
+    background-color: #f9f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-item .label {
+    font-weight: 600;
+    color: #8b4545;
+    margin-bottom: 5px;
+}
+
+.detail-item .value {
+    color: #555;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #f0d5d5;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #c97b7b;
+}
+
+.year {
+    font-weight: bold;
+    color: #c97b7b;
+    margin-bottom: 5px;
+}
+
+.timeline-item .content h3 {
+    font-size: 1.3rem;
+    color: #8b4545;
+    margin-bottom: 5px;
+}
+
+/* Skills */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    background-color: #f9f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(201, 123, 123, 0.2);
+}
+
+.skill-icon {
+    font-size: 24px;
+    color: #c97b7b;
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    font-weight: 600;
+    color: #8b4545;
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    height: 8px;
+    background-color: #f0d5d5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #c97b7b;
+    border-radius: 4px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+/* Hobbies */
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.hobby-item {
+    background-color: #f9f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(201, 123, 123, 0.2);
+}
+
+.hobby-icon {
+    font-size: 30px;
+    color: #c97b7b;
+    margin-bottom: 15px;
+}
+
+.hobby-name {
+    font-weight: 600;
+    color: #8b4545;
+}
+
+/* Organization */
+.organization {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.org-item {
+    background-color: #f9f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.org-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(201, 123, 123, 0.2);
+}
+
+.org-item h3 {
+    color: #c97b7b;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.org-item h2 {
+    color: #8b4545;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    border: none;
+    padding: 0;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #f0d5d5;
+    color: #c97b7b;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #c97b7b;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+    
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+    
+    .timeline::before {
+        left: 15px;
+    }
+    
+    .timeline-item {
+        padding-left: 30px;
+    }
+    
+    .timeline-item::before {
+        left: 7px;
+    }
+    
+    .skills, .hobbies {
+        grid-template-columns: 1fr;
+    }
+    
+    .org-item h2 {
+        font-size: 1.3rem;
+    }
+}
